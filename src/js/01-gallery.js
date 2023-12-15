@@ -77,17 +77,18 @@ gallery.innerHTML = images.reduce((html, { preview, original, description }) => 
 </li>`, '');
 
 import "simplelightbox/dist/simple-lightbox.min.css";
-import simpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox";
+import icons from "../img/icons.svg";
 
-new simpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
     closeText: `<svg class="close-btn">
-        <use href="./img/icons.svg#close"></use>
+        <use href="${icons}#close"></use>
 </svg>`,
     navText: [`<svg class="arrow-btn">
-        <use href="./img/icons.svg#arrow-left"></use>
+        <use href="${icons}#arrow-left"></use>
 </svg>`,
         `<svg class="arrow-btn">
-        <use href="./img/icons.svg#arrow-right"></use>
+        <use href="${icons}#arrow-right"></use>
 </svg>`],
     captionsData: 'alt',
     captionDelay: 250
